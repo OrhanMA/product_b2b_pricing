@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_product_template_form_inherit_b2b_pricing" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.b2b.pricing</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='list_price_uom']" position="after">
+                <field name="product_b2b_base_price"/>
+                <field name="product_b2b_distributor_price"/>
+                <field name="product_b2b_preorder"/>
+                <field name="product_b2b_enabled"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
